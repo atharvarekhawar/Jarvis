@@ -26,7 +26,6 @@ export default function Header() {
         </div>
         <div className="flex items-center">
           <UserButton
-            afterSignOutUrl="/"
             appearance={{
               elements: {
                 avatarBox:
