@@ -3,6 +3,7 @@
 import { UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
+import { BotIcon } from "lucide-react";
 import { useNavigation } from "@/lib/context/navigation";
 
 export default function rHeader() {
@@ -24,8 +25,9 @@ export default function rHeader() {
               <HamburgerMenuIcon className="h-5 w-5" />
             )}
           </Button>
-          <div className="font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-            Chat with an AI Agent
+          <div className="flex gap-1 font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+            <p>Chat with Jarvis</p>
+            <BotIcon className="h-6 w-6 text-gray-600" />
           </div>
         </div>
         <div className="flex items-center">

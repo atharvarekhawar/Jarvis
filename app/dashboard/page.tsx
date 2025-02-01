@@ -14,11 +14,11 @@ export default function DashboardPage() {
               <BotIcon className="w-12 h-12 text-gray-600" />
             </div>
             <h2 className="text-2xl font-semibold bg-gradient-to-br from-gray-900 to-gray-600 bg-clip-text text-transparent">
-              Welcome to the AI Agent Chat
+              Hi 👋 , I am Jarvis
             </h2>
             <p className="text-gray-600 max-w-md mx-auto">
               Start a new conversation or select an existing chat from the
-              sidebar. Your AI assistant is ready to help with any task.
+              sidebar. Jarvis is ready to help with any task.
             </p>
             <div className="pt-2 flex justify-center gap-4 text-sm text-gray-500">
               <div className="flex items-center gap-1.5">
