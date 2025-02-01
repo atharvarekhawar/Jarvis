@@ -2,11 +2,11 @@
 
 import { UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 import { useNavigation } from "@/lib/context/navigation";
 
-export default function Header() {
-  const { setIsMobileNavOpen } = useNavigation();
+export default function rHeader() {
+  const { setIsMobileNavOpen, isMobileNavOpen } = useNavigation();
 
   return (
     <header className="border-b border-gray-200/50 bg-white/80 backdrop-blur-xl sticky top-0 z-50">
@@ -15,10 +15,14 @@ export default function Header() {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setIsMobileNavOpen(true)}
+            onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
             className="md:hidden text-gray-500 hover:text-gray-700 hover:bg-gray-100/50"
           >
-            <HamburgerMenuIcon className="h-5 w-5" />
+            {isMobileNavOpen ? (
+              <Cross1Icon className="h-5 w-5" />
+            ) : (
+              <HamburgerMenuIcon className="h-5 w-5" />
+            )}
           </Button>
           <div className="font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
             Chat with an AI Agent
