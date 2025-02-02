@@ -51,7 +51,7 @@ export async function POST(req: Request) {
     });
 
     // Handle the streaming response
-    (async () => {
+    const startStream = async () => {
       try {
         // Send initial connection established message
         await sendSSEMessage(writer, { type: StreamMessageType.Connected });
@@ -134,7 +134,9 @@ export async function POST(req: Request) {
           console.error("Error closing writer:", closeError);
         }
       }
-    })();
+    };
+
+    startStream();
 
     return response;
   } catch (error) {
